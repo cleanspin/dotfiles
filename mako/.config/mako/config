@@ -1,0 +1,46 @@
+# Base16 Catppuccin Mocha - Mako Theme
+# Author: https://github.com/catppuccin/catppuccin
+
+# Global
+max-visible=5
+sort=-time
+layer=overlay
+anchor=center-right
+output=HDMI-A-1
+group-by=app-name
+
+# Appearance
+font=Google Sans Flex 14
+background-color=#1e1e2edd
+text-color=#cdd6f4
+border-color=#89b4fa
+border-size=2
+border-radius=15
+padding=25
+margin=20
+width=450
+height=200
+
+# Icons
+icons=1
+max-icon-size=64
+icon-path=/usr/share/icons/breeze-dark
+
+# Behavior
+default-timeout=8000
+ignore-timeout=1
+
+# Urgency levels
+[urgency=low]
+background-color=#1e1e2ecc
+border-color=#94e2d5
+
+[urgency=normal]
+background-color=#1e1e2edd
+border-color=#89b4fa
+
+[urgency=critical]
+background-color=#1e1e2eff
+border-color=#f38ba8
+default-timeout=0
+ignore-timeout=0

@@ -1,0 +1,82 @@
+/* File Browser Theme - imports colors from flavours-managed colors.rasi */
+
+@import "colors.rasi"
+
+window {
+    width: 900px;
+    background-color: @base00;
+    border: 2px solid;
+    border-color: @base0D;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+mainbox {
+    background-color: transparent;
+    children: [inputbar, listview, mode-switcher];
+    spacing: 15px;
+}
+
+mode-switcher {
+    background-color: transparent;
+    spacing: 10px;
+}
+
+button {
+    background-color: @base01;
+    text-color: @base03;
+    padding: 8px 15px;
+    border-radius: 10px;
+    horizontal-align: 0.5;
+    expand: true;
+}
+
+button selected {
+    background-color: @base0D;
+    text-color: @base00;
+}
+
+inputbar {
+    background-color: @base01;
+    border-radius: 10px;
+    padding: 10px 15px;
+    children: [entry];
+}
+
+entry {
+    background-color: transparent;
+    text-color: @base05;
+    placeholder: "";
+    placeholder-color: @base03;
+}
+
+listview {
+    background-color: transparent;
+    columns: 1;
+    lines: 12;
+    spacing: 5px;
+    scrollbar: false;
+}
+
+element {
+    background-color: transparent;
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+
+element normal.normal,
+element alternate.normal {
+    background-color: transparent;
+    text-color: @base05;
+}
+
+element selected.normal {
+    background-color: @base0D;
+    text-color: @base00;
+}
+
+element-text {
+    background-color: transparent;
+    text-color: inherit;
+    vertical-align: 0.5;
+}

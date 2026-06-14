@@ -1,0 +1,15 @@
+# Wallpapers are externally managed (~350MB) — never tracked
+wallpapers/
+
+# Live-config backup created during the Stow migration
+.config.bak/
+
+# starship.toml is concatenated at runtime by theme-switch.sh (base + palette)
+**/starship.toml
+**/starship.toml.bak
+
+# Stow leftovers / editor / OS noise
+*.prestow
+*.swp
+*.swo
+.DS_Store

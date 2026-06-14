@@ -1,0 +1,68 @@
+# Flavours configuration
+
+shell = "bash -c '{}'"
+
+# Ironbar (colors only; style.css @imports this)
+[[items]]
+file = "~/.config/ironbar/colors.css"
+template = "ironbar"
+subtemplate = "default"
+rewrite = true
+hook = "touch ~/.config/ironbar/style.css"
+
+# Rofi
+[[items]]
+file = "~/.config/rofi/colors.rasi"
+template = "rofi"
+subtemplate = "default"
+rewrite = true
+
+# Mako
+[[items]]
+file = "~/.config/mako/config"
+template = "mako"
+subtemplate = "default"
+rewrite = true
+hook = "makoctl reload"
+
+# Hyprlock
+[[items]]
+file = "~/.config/hyprlock/hyprlock.conf"
+template = "hyprlock"
+subtemplate = "default"
+rewrite = true
+
+# Kitty
+[[items]]
+file = "~/.config/kitty/colors.conf"
+template = "kitty"
+subtemplate = "default"
+rewrite = true
+
+# Starship (appended to main config)
+[[items]]
+file = "~/.config/starship-palette.toml"
+template = "starship"
+subtemplate = "default"
+rewrite = true
+
+# Pandoc HTML CSS (for markdown preview)
+[[items]]
+file = "~/.config/pandoc/html-theme.css"
+template = "pandoc"
+subtemplate = "default"
+rewrite = true
+
+# Zathura PDF viewer
+[[items]]
+file = "~/.config/zathura/zathurarc"
+template = "zathura"
+subtemplate = "default"
+rewrite = true
+
+# Hyprland appearance (shadows, decorations, animations)
+[[items]]
+file = "~/.config/hypr/conf.d/appearance.conf"
+template = "hypr-appearance"
+subtemplate = "default"
+rewrite = true

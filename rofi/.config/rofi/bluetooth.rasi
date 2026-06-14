@@ -1,0 +1,18 @@
+@import "colors.rasi"
+
+configuration {
+    show-icons: false;
+    disable-history: true;
+}
+
+window {
+    width: 300px;
+}
+
+mainbox {
+    children: [listview];
+}
+
+element-text {
+    font: "FiraCode Nerd Font 12";
+}

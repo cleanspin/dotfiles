@@ -1,0 +1,181 @@
+# Ironbar Configuration — Nord Theme
+# DP-2 (2560x1440): workspaces 1-5, minimal bar
+# HDMI-A-1 (1920x1080): workspaces 6-10, full bar
+
+icon_theme = "Papirus-Dark"
+
+# =====================================================================
+# DP-2 — Minimal Bar
+# =====================================================================
+
+[monitors.DP-2]
+position = "top"
+height = 34
+anchor_to_edges = true
+
+# --- Left: Arch icon + Launcher (taskbar) ---
+
+[[monitors.DP-2.start]]
+type = "label"
+name = "arch"
+label = "<span font='FiraCode Nerd Font 18'></span>"
+
+[[monitors.DP-2.start]]
+type = "launcher"
+name = "taskbar"
+show_names = false
+show_icons = true
+icon_size = 18
+
+# --- Center: Workspaces ---
+
+[[monitors.DP-2.center]]
+type = "workspaces"
+all_monitors = false
+sort = "index"
+name_map = { "1" = "1", "2" = "2", "3" = "3", "4" = "4", "5" = "5" }
+
+# --- Right: Music, Volume, Weather, Clock ---
+
+[[monitors.DP-2.end]]
+type = "music"
+name = "music"
+player_type = "mpris"
+format = ""
+show_status_icon = true
+on_click_left = "playerctl play-pause"
+on_scroll_up = "playerctl next"
+on_scroll_down = "playerctl previous"
+
+[monitors.DP-2.end.icons]
+play = "<span font_family='FiraCode Nerd Font' foreground='#2e3440'></span>"
+pause = "<span font_family='FiraCode Nerd Font' foreground='#2e3440'></span>"
+
+[[monitors.DP-2.end]]
+type = "script"
+name = "pulseaudio"
+cmd = "~/.config/ironbar/scripts/volume.sh"
+mode = "poll"
+interval = 2000
+on_click_left = "~/.config/ironbar/scripts/popup-toggle.sh pulsemixer"
+
+[[monitors.DP-2.end]]
+type = "script"
+name = "weather"
+cmd = "~/.config/ironbar/scripts/weather.sh"
+mode = "poll"
+interval = 1800000
+on_click_left = "~/.config/ironbar/scripts/popup-toggle.sh weather"
+
+[[monitors.DP-2.end]]
+type = "clock"
+name = "clock"
+format = "%H:%M"
+format_popup = "%A, %B %d, %Y"
+
+# =====================================================================
+# HDMI-A-1 — Full Bar
+# =====================================================================
+
+[monitors.HDMI-A-1]
+position = "top"
+height = 34
+anchor_to_edges = true
+
+# --- Left: Arch icon + Launcher (taskbar) ---
+
+[[monitors.HDMI-A-1.start]]
+type = "label"
+name = "arch2"
+label = "<span font='FiraCode Nerd Font 18'></span>"
+
+[[monitors.HDMI-A-1.start]]
+type = "launcher"
+name = "taskbar2"
+show_names = false
+show_icons = true
+icon_size = 18
+
+# --- Center: Workspaces ---
+
+[[monitors.HDMI-A-1.center]]
+type = "workspaces"
+all_monitors = false
+sort = "index"
+name_map = { "6" = "6", "7" = "7", "8" = "8", "9" = "9", "10" = "0" }
+
+# --- Right: Tray, Colorpicker, Keybindings, Music, Volume, Bluetooth, SysInfo, Weather, Clock ---
+
+[[monitors.HDMI-A-1.end]]
+type = "tray"
+name = "tray"
+icon_size = 18
+
+[[monitors.HDMI-A-1.end]]
+type = "label"
+name = "colorpicker"
+label = ""
+on_click_left = "~/.config/ironbar/scripts/colorpicker.sh pick-hex"
+on_click_right = "~/.config/ironbar/scripts/colorpicker.sh pick-rgb"
+
+[[monitors.HDMI-A-1.end]]
+type = "label"
+name = "keybindings"
+label = ""
+on_click_left = "~/.config/hypr/scripts/keyhints.sh"
+
+[[monitors.HDMI-A-1.end]]
+type = "music"
+name = "music2"
+player_type = "mpris"
+format = ""
+show_status_icon = true
+on_click_left = "playerctl play-pause"
+on_scroll_up = "playerctl next"
+on_scroll_down = "playerctl previous"
+
+[monitors.HDMI-A-1.end.icons]
+play = "<span font_family='FiraCode Nerd Font' foreground='#2e3440'></span>"
+pause = "<span font_family='FiraCode Nerd Font' foreground='#2e3440'></span>"
+
+[[monitors.HDMI-A-1.end]]
+type = "script"
+name = "pulseaudio2"
+cmd = "~/.config/ironbar/scripts/volume.sh"
+mode = "poll"
+interval = 2000
+on_click_left = "~/.config/ironbar/scripts/popup-toggle.sh pulsemixer"
+
+[[monitors.HDMI-A-1.end]]
+type = "label"
+name = "bluetooth"
+label = ""
+on_click_left = "~/.config/ironbar/scripts/popup-toggle.sh bluetui"
+on_click_right = "~/.config/ironbar/scripts/bluetooth-profile-toggle.sh"
+
+[[monitors.HDMI-A-1.end]]
+type = "sys_info"
+name = "sysinfo"
+format = [
+    "{cpu_percent:1.0}%",
+    "{memory_percent:1.0}%",
+]
+on_click_left = "kitty btop"
+
+[monitors.HDMI-A-1.end.interval]
+cpu = 2
+memory = 5
+
+[[monitors.HDMI-A-1.end]]
+type = "script"
+name = "weather2"
+cmd = "~/.config/ironbar/scripts/weather.sh"
+mode = "poll"
+interval = 1800000
+on_click_left = "~/.config/ironbar/scripts/popup-toggle.sh weather"
+
+[[monitors.HDMI-A-1.end]]
+type = "clock"
+name = "clock2"
+format = "%H:%M"
+format_popup = "%A, %B %d, %Y"

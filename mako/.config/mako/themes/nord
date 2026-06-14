@@ -1,0 +1,43 @@
+# Mako notification daemon - Nord
+
+# Global
+max-visible=5
+sort=-time
+layer=overlay
+anchor=center-right
+output=HDMI-A-1
+
+# Appearance
+font=Google Sans Flex 14
+background-color=#2e3440dd
+text-color=#d8dee9
+border-color=#88c0d0
+border-size=2
+border-radius=15
+padding=25
+margin=20
+width=450
+height=200
+
+# Icons
+icons=1
+max-icon-size=64
+icon-path=/usr/share/icons/Papirus-Dark
+
+# Behavior
+default-timeout=5000
+ignore-timeout=0
+
+# Urgency levels
+[urgency=low]
+background-color=#2e3440cc
+border-color=#81a1c1
+
+[urgency=normal]
+background-color=#2e3440dd
+border-color=#88c0d0
+
+[urgency=critical]
+background-color=#2e3440ff
+border-color=#bf616a
+default-timeout=0

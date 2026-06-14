@@ -1,0 +1,265 @@
+; Tokyo Night theme for Silent SDDM
+; Custom config with wallpaper and left-aligned login
+
+[General]
+scale = 1.0
+enable-animations = true
+animated-background-placeholder = ""
+background-fill-mode = fill
+
+[LockScreen]
+display = true
+padding-top = 0
+padding-right = 0
+padding-bottom = 0
+padding-left = 0
+background = backgrounds/custom.jpg
+use-background-color = false
+background-color = #1a1b26
+blur = 40
+brightness = -0.1
+saturation = 0.8
+
+[LockScreen.Clock]
+display = true
+position = center
+align = center
+format = hh:mm
+font-family = Google Sans Flex
+font-size = 70
+font-weight = 900
+color = #c0caf5
+
+[LockScreen.Date]
+display = true
+format = dddd, MMMM dd, yyyy
+locale = "en_US"
+font-family = Google Sans Flex
+font-size = 14
+font-weight = 600
+color = #c0caf5
+margin-top = -15
+
+[LockScreen.Message]
+display = true
+position = bottom-center
+align = center
+text = Press any key
+font-family = Google Sans Flex
+font-size = 12
+font-weight = 400
+display-icon = false
+icon-size = 16
+color = #565f89
+paint-icon = false
+spacing = 0
+
+[LoginScreen]
+background = backgrounds/custom.jpg
+use-background-color = false
+background-color = #1a1b26
+blur = 40
+brightness = -0.1
+saturation = 0.8
+
+[LoginScreen.LoginArea]
+position = left
+margin = 200
+
+[LoginScreen.LoginArea.Avatar]
+shape = circle
+border-radius = 35
+active-size = 120
+inactive-size = 80
+inactive-opacity = 0.35
+active-border-size = 2
+inactive-border-size = 0
+active-border-color = #7aa2f7
+inactive-border-color = #7aa2f7
+
+[LoginScreen.LoginArea.Username]
+font-family = Google Sans Flex
+font-size = 16
+font-weight = 700
+color = #c0caf5
+margin = 10
+
+[LoginScreen.LoginArea.PasswordInput]
+width = 200
+height = 30
+display-icon = false
+font-family = Google Sans Flex
+font-size = 12
+icon = password.svg
+icon-size = 16
+content-color = #c0caf5
+background-color = #24283b
+background-opacity = 0.9
+border-size = 1
+border-color = #3b4261
+border-radius-left = 10
+border-radius-right = 10
+margin-top = 10
+masked-character = "●"
+
+[LoginScreen.LoginArea.LoginButton]
+background-color = #24283b
+background-opacity = 0.9
+active-background-color = #7aa2f7
+active-background-opacity = 1.0
+icon = arrow-right.svg
+icon-size = 18
+content-color = #7aa2f7
+active-content-color = #1a1b26
+border-size = 1
+border-color = #3b4261
+border-radius-left = 10
+border-radius-right = 10
+margin-left = 5
+show-text-if-no-password = true
+hide-if-not-needed = false
+font-family = Google Sans Flex
+font-size = 12
+font-weight = 600
+
+[LoginScreen.LoginArea.Spinner]
+display-text = true
+text = "Logging in"
+font-family = Google Sans Flex
+font-weight = 600
+font-size = 14
+icon-size = 30
+icon = spinner.svg
+color = #c0caf5
+spacing = 5
+
+[LoginScreen.LoginArea.WarningMessage]
+font-family = Google Sans Flex
+font-size = 11
+font-weight = 400
+normal-color = #c0caf5
+warning-color = #e0af68
+error-color = #f7768e
+margin-top = 10
+
+[LoginScreen.MenuArea.Buttons]
+margin-top = 0
+margin-right = 0
+margin-bottom = 100
+margin-left = 0
+size = 30
+border-radius = 10
+spacing = 20
+font-family = Google Sans Flex
+
+[LoginScreen.MenuArea.Popups]
+max-height = 230
+item-height = 30
+item-spacing = 2
+padding = 5
+display-scrollbar = false
+margin = 5
+background-color = #24283b
+background-opacity = 0.95
+active-option-background-color = #3b4261
+active-option-background-opacity = 1.0
+content-color = #c0caf5
+active-content-color = #7aa2f7
+font-family = Google Sans Flex
+border-size = 1
+border-color = #3b4261
+font-size = 11
+icon-size = 16
+
+[LoginScreen.MenuArea.Session]
+display = true
+position = bottom-center
+index = 0
+popup-direction = up
+popup-align = center
+display-session-name = false
+button-width = -1
+popup-width = 200
+background-color = #7aa2f7
+background-opacity = 0.0
+active-background-opacity = 1.0
+content-color = #c0caf5
+active-content-color = #1a1b26
+border-size = 0
+font-size = 10
+icon-size = 16
+
+[LoginScreen.MenuArea.Layout]
+display = true
+position = bottom-center
+index = 0
+popup-direction = up
+popup-align = center
+popup-width = 180
+display-layout-name = false
+background-color = #7aa2f7
+background-opacity = 0.0
+active-background-opacity = 1.0
+content-color = #c0caf5
+active-content-color = #1a1b26
+border-size = 0
+font-size = 10
+icon = language.svg
+icon-size = 16
+
+[LoginScreen.MenuArea.Keyboard]
+display = true
+position = bottom-center
+index = 0
+background-color = #7aa2f7
+background-opacity = 0.0
+active-background-opacity = 1.0
+content-color = #c0caf5
+active-content-color = #1a1b26
+border-size = 0
+icon = keyboard.svg
+icon-size = 16
+
+[LoginScreen.MenuArea.Power]
+display = true
+position = bottom-center
+index = 0
+popup-direction = up
+popup-align = center
+popup-width = 100
+background-color = #7aa2f7
+background-opacity = 0.0
+active-background-opacity = 1.0
+content-color = #c0caf5
+active-content-color = #1a1b26
+border-size = 0
+icon = power.svg
+icon-size = 16
+
+[LoginScreen.VirtualKeyboard]
+scale = 1.0
+position = login
+start-hidden = true
+background-color = #24283b
+background-opacity = 0.15
+key-content-color = #c0caf5
+key-color = #24283b
+key-opacity = 1.0
+key-active-background-color = #3b4261
+key-active-opacity = 1.0
+selection-background-color = #c0caf5
+selection-content-color = #1a1b26
+primary-color = #7aa2f7
+border-size = 0
+border-color = #3b4261
+
+[Tooltips]
+enable = true
+font-family = Google Sans Flex
+font-size = 11
+content-color = #c0caf5
+background-color = #24283b
+background-opacity = 0.95
+border-radius = 10
+disable-user = false
+disable-login-button = false

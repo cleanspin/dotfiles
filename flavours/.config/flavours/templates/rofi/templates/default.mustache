@@ -1,0 +1,110 @@
+/* Base16 {{scheme-name}} - Rofi Theme */
+/* Author: {{scheme-author}} */
+
+* {
+    base00: #{{base00-hex}};
+    base01: #{{base01-hex}};
+    base02: #{{base02-hex}};
+    base03: #{{base03-hex}};
+    base05: #{{base05-hex}};
+    base08: #{{base08-hex}};
+    base0D: #{{base0D-hex}};
+
+    background-color: transparent;
+    text-color: @base05;
+    font: "Google Sans Flex 12";
+}
+
+window {
+    width: 600px;
+    background-color: @base00;
+    border: 2px solid;
+    border-color: @base0D;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+mainbox {
+    background-color: transparent;
+    children: [inputbar, listview, mode-switcher];
+    spacing: 15px;
+}
+
+mode-switcher {
+    background-color: transparent;
+    spacing: 10px;
+}
+
+button {
+    background-color: @base01;
+    text-color: @base03;
+    padding: 8px 15px;
+    border-radius: 10px;
+    horizontal-align: 0.5;
+    expand: true;
+}
+
+button selected {
+    background-color: @base0D;
+    text-color: @base00;
+}
+
+inputbar {
+    background-color: @base01;
+    border-radius: 10px;
+    padding: 10px 15px;
+    children: [entry];
+}
+
+prompt {
+    background-color: transparent;
+    text-color: @base0D;
+    padding: 0 10px 0 0;
+}
+
+entry {
+    background-color: transparent;
+    text-color: @base05;
+    placeholder: "";
+    placeholder-color: @base03;
+}
+
+listview {
+    background-color: transparent;
+    columns: 1;
+    lines: 8;
+    spacing: 5px;
+    scrollbar: false;
+}
+
+element {
+    background-color: transparent;
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+
+element normal.normal {
+    background-color: transparent;
+    text-color: @base05;
+}
+
+element selected.normal {
+    background-color: @base0D;
+    text-color: @base00;
+}
+
+element alternate.normal {
+    background-color: transparent;
+    text-color: @base05;
+}
+
+element-icon {
+    size: 24px;
+    padding: 0 10px 0 0;
+}
+
+element-text {
+    background-color: transparent;
+    text-color: inherit;
+    vertical-align: 0.5;
+}

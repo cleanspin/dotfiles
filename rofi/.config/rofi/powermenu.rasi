@@ -1,0 +1,58 @@
+/* Power Menu Theme - Grid Layout */
+
+@import "colors.rasi"
+
+configuration {
+    show-icons: false;
+}
+
+window {
+    background-color: @base00;
+    border: 2px solid;
+    border-color: @base0D;
+    border-radius: 15px;
+    padding: 20px;
+    location: center;
+}
+
+mainbox {
+    background-color: transparent;
+    children: [listview];
+}
+
+listview {
+    background-color: transparent;
+    columns: 3;
+    lines: 2;
+    spacing: 15px;
+    scrollbar: false;
+    fixed-columns: true;
+    fixed-height: false;
+}
+
+element {
+    background-color: @base01;
+    text-color: @base05;
+    padding: 20px 25px;
+    border-radius: 12px;
+}
+
+element normal.normal,
+element alternate.normal {
+    background-color: @base01;
+    text-color: @base05;
+}
+
+element selected.normal,
+element selected.alternate {
+    background-color: @base0D;
+    text-color: @base00;
+}
+
+element-text {
+    background-color: transparent;
+    text-color: inherit;
+    horizontal-align: 0.5;
+    vertical-align: 0.5;
+    font: "FiraCode Nerd Font 14";
+}

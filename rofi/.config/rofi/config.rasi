@@ -1,0 +1,21 @@
+/* Rofi Configuration - Catppuccin Mocha */
+
+configuration {
+    modi: "drun,window";
+    show-icons: true;
+    icon-theme: "Papirus-Dark";
+    terminal: "kitty";
+    drun-display-format: "{name}";
+    display-drun: "Apps";
+    display-window: "Windows";
+    location: 0;
+    disable-history: false;
+    hide-scrollbar: true;
+    sidebar-mode: false;
+    kb-mode-next: "Tab";
+    kb-mode-previous: "Shift+Tab";
+    kb-element-next: "";
+    kb-element-prev: "";
+}
+
+@import "colors.rasi"

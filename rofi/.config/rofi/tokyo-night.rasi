@@ -1,0 +1,107 @@
+/* Tokyo Night Theme for Rofi */
+
+* {
+    bg: #1a1b26;
+    bg-alt: #24283b;
+    fg: #c0caf5;
+    accent: #bb9af7;
+    urgent: #f7768e;
+
+    background-color: transparent;
+    text-color: @fg;
+    font: "Google Sans Flex 12";
+}
+
+window {
+    width: 600px;
+    background-color: @bg;
+    border: 2px solid;
+    border-color: @accent;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+mainbox {
+    background-color: transparent;
+    children: [inputbar, listview, mode-switcher];
+    spacing: 15px;
+}
+
+mode-switcher {
+    background-color: transparent;
+    spacing: 10px;
+}
+
+button {
+    background-color: @bg-alt;
+    text-color: #414868;
+    padding: 8px 15px;
+    border-radius: 10px;
+    horizontal-align: 0.5;
+    expand: true;
+}
+
+button selected {
+    background-color: @accent;
+    text-color: @bg;
+}
+
+inputbar {
+    background-color: @bg-alt;
+    border-radius: 10px;
+    padding: 10px 15px;
+    children: [entry];
+}
+
+prompt {
+    background-color: transparent;
+    text-color: @accent;
+    padding: 0 10px 0 0;
+}
+
+entry {
+    background-color: transparent;
+    text-color: @fg;
+    placeholder: "";
+    placeholder-color: #414868;
+}
+
+listview {
+    background-color: transparent;
+    columns: 1;
+    lines: 8;
+    spacing: 5px;
+    scrollbar: false;
+}
+
+element {
+    background-color: transparent;
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+
+element normal.normal {
+    background-color: transparent;
+    text-color: @fg;
+}
+
+element selected.normal {
+    background-color: @accent;
+    text-color: @bg;
+}
+
+element alternate.normal {
+    background-color: transparent;
+    text-color: @fg;
+}
+
+element-icon {
+    size: 24px;
+    padding: 0 10px 0 0;
+}
+
+element-text {
+    background-color: transparent;
+    text-color: inherit;
+    vertical-align: 0.5;
+}

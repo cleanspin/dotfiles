@@ -1,0 +1,130 @@
+/* Catppuccin Mocha Theme for Rofi */
+
+* {
+    /* Catppuccin Mocha */
+    rosewater: #f5e0dc;
+    flamingo: #f2cdcd;
+    pink: #f5c2e7;
+    mauve: #cba6f7;
+    red: #f38ba8;
+    maroon: #eba0ac;
+    peach: #fab387;
+    yellow: #f9e2af;
+    green: #a6e3a1;
+    teal: #94e2d5;
+    sky: #89dceb;
+    sapphire: #74c7ec;
+    blue: #89b4fa;
+    lavender: #b4befe;
+    text: #cdd6f4;
+    subtext1: #bac2de;
+    subtext0: #a6adc8;
+    overlay2: #9399b2;
+    overlay1: #7f849c;
+    overlay0: #6c7086;
+    surface2: #585b70;
+    surface1: #45475a;
+    surface0: #313244;
+    base: #1e1e2e;
+    mantle: #181825;
+    crust: #11111b;
+
+    /* Theme colors */
+    background-color: transparent;
+    text-color: @text;
+    font: "Google Sans Flex 12";
+}
+
+window {
+    width: 600px;
+    background-color: @base;
+    border: 2px solid;
+    border-color: @mauve;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+mainbox {
+    background-color: transparent;
+    children: [inputbar, listview, mode-switcher];
+    spacing: 15px;
+}
+
+mode-switcher {
+    background-color: transparent;
+    spacing: 10px;
+}
+
+button {
+    background-color: @surface0;
+    text-color: @overlay0;
+    padding: 8px 15px;
+    border-radius: 10px;
+    horizontal-align: 0.5;
+    expand: true;
+}
+
+button selected {
+    background-color: @mauve;
+    text-color: @crust;
+}
+
+inputbar {
+    background-color: @surface0;
+    border-radius: 10px;
+    padding: 10px 15px;
+    children: [entry];
+}
+
+prompt {
+    background-color: transparent;
+    text-color: @mauve;
+    padding: 0 10px 0 0;
+}
+
+entry {
+    background-color: transparent;
+    text-color: @text;
+    placeholder: "";
+    placeholder-color: @overlay0;
+}
+
+listview {
+    background-color: transparent;
+    columns: 1;
+    lines: 8;
+    spacing: 5px;
+    scrollbar: false;
+}
+
+element {
+    background-color: transparent;
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+
+element normal.normal {
+    background-color: transparent;
+    text-color: @text;
+}
+
+element selected.normal {
+    background-color: @mauve;
+    text-color: @crust;
+}
+
+element alternate.normal {
+    background-color: transparent;
+    text-color: @text;
+}
+
+element-icon {
+    size: 24px;
+    padding: 0 10px 0 0;
+}
+
+element-text {
+    background-color: transparent;
+    text-color: inherit;
+    vertical-align: 0.5;
+}

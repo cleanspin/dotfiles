@@ -1,0 +1,126 @@
+/* Nord Theme for Rofi */
+
+* {
+    /* Nord Polar Night */
+    nord0: #2e3440;
+    nord1: #3b4252;
+    nord2: #434c5e;
+    nord3: #4c566a;
+
+    /* Nord Snow Storm */
+    nord4: #d8dee9;
+    nord5: #e5e9f0;
+    nord6: #eceff4;
+
+    /* Nord Frost */
+    nord7: #8fbcbb;
+    nord8: #88c0d0;
+    nord9: #81a1c1;
+    nord10: #5e81ac;
+
+    /* Nord Aurora */
+    nord11: #bf616a;
+    nord12: #d08770;
+    nord13: #ebcb8b;
+    nord14: #a3be8c;
+    nord15: #b48ead;
+
+    /* Theme colors */
+    background-color: transparent;
+    text-color: @nord4;
+    font: "Google Sans Flex 12";
+}
+
+window {
+    width: 600px;
+    background-color: @nord0;
+    border: 2px solid;
+    border-color: @nord8;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+mainbox {
+    background-color: transparent;
+    children: [inputbar, listview, mode-switcher];
+    spacing: 15px;
+}
+
+mode-switcher {
+    background-color: transparent;
+    spacing: 10px;
+}
+
+button {
+    background-color: @nord1;
+    text-color: @nord3;
+    padding: 8px 15px;
+    border-radius: 10px;
+    horizontal-align: 0.5;
+    expand: true;
+}
+
+button selected {
+    background-color: @nord8;
+    text-color: @nord0;
+}
+
+inputbar {
+    background-color: @nord1;
+    border-radius: 10px;
+    padding: 10px 15px;
+    children: [entry];
+}
+
+prompt {
+    background-color: transparent;
+    text-color: @nord8;
+    padding: 0 10px 0 0;
+}
+
+entry {
+    background-color: transparent;
+    text-color: @nord4;
+    placeholder: "";
+    placeholder-color: @nord3;
+}
+
+listview {
+    background-color: transparent;
+    columns: 1;
+    lines: 8;
+    spacing: 5px;
+    scrollbar: false;
+}
+
+element {
+    background-color: transparent;
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+
+element normal.normal {
+    background-color: transparent;
+    text-color: @nord4;
+}
+
+element selected.normal {
+    background-color: @nord8;
+    text-color: @nord0;
+}
+
+element alternate.normal {
+    background-color: transparent;
+    text-color: @nord4;
+}
+
+element-icon {
+    size: 24px;
+    padding: 0 10px 0 0;
+}
+
+element-text {
+    background-color: transparent;
+    text-color: inherit;
+    vertical-align: 0.5;
+}

@@ -1,0 +1,55 @@
+# Base16 {{scheme-name}} - Hyprland Appearance
+# Author: {{scheme-author}}
+
+# Colors (Base16)
+$base00 = rgb({{base00-hex}})
+$base01 = rgb({{base01-hex}})
+$base02 = rgb({{base02-hex}})
+$base03 = rgb({{base03-hex}})
+$base04 = rgb({{base04-hex}})
+$base05 = rgb({{base05-hex}})
+$base06 = rgb({{base06-hex}})
+$base07 = rgb({{base07-hex}})
+$base08 = rgb({{base08-hex}})
+$base09 = rgb({{base09-hex}})
+$base0A = rgb({{base0A-hex}})
+$base0B = rgb({{base0B-hex}})
+$base0C = rgb({{base0C-hex}})
+$base0D = rgb({{base0D-hex}})
+$base0E = rgb({{base0E-hex}})
+$base0F = rgb({{base0F-hex}})
+
+decoration {
+    rounding = 10
+
+    blur {
+        enabled = true
+        size = 5
+        passes = 2
+        new_optimizations = true
+        xray = false
+    }
+
+    shadow {
+        enabled = true
+        range = 30
+        render_power = 2
+        color = rgba({{base0E-hex}}aa)
+        color_inactive = rgba({{base00-hex}}00)
+    }
+}
+
+animations {
+    enabled = true
+
+    bezier = myBezier, 0, 0, 1, 1
+    bezier = smoothOut, 0.36, 0, 0.66, -0.56
+    bezier = smoothIn, 0.25, 1, 0.5, 1
+
+    animation = windows, 1, 4, myBezier, slide
+    animation = windowsOut, 1, 4, smoothOut, slide
+    animation = border, 1, 10, default
+    animation = borderangle, 1, 8, default
+    animation = fade, 0, 5, smoothIn
+    animation = workspaces, 1, 6, default
+}
